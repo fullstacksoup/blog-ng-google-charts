@@ -1,5 +1,5 @@
 ## Step I 
-# npm install 
+### npm install 
 
 ## Step II 
-# ng serve -o
+### ng serve -o
