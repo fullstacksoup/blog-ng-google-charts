@@ -1,0 +1,184 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+.white-icon {
+  color: white;
+}
+/* Note: If you're using an SVG icon, you should make the class target the `<svg>` element */
+.white-icon svg {
+  fill: white;
+}
+.blue-icon {
+  color: darkblue;
+}
+/* Note: If you're using an SVG icon, you should make the class target the `<svg>` element */
+.blue-icon svg {
+  fill: darkblue;
+}
+
+body{margin:0}
+
+.container {
+  overflow-y: hidden;
+}
+
+nav .container {
+  overflow-y: hidden;
+}
+
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100% !important;
+}
+
+.sidenav-container {
+  height: 90%;
+  width: 100%;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.sidenav-content {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.sidenav {
+  width: 250px;
+}
+
+.sidenav .mat-toolbar {
+  // background: #ddd;
+  background: #071d49;
+  color: #fff;
+
+}
+
+#sidenav.menu-open {
+   width: 250px;
+}
+
+#sidenav.menu-closed {
+  width: 0px;
+}
+
+.mat-toolbar.mat-primary {
+  background: #071d49;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.is-active {
+  background-color: #aaa;
+  color: #fff;
+}
+
+.is-active:hover {
+  background-color: #aaa;
+  color: #fff;
+}
+
+.is-active:focus {
+  background-color: #aaa;
+  color: #fff;
+}
+
+.logo {
+  margin-right: 10px;
+  font-size: 18px;
+  width: 100%;
+  font-weight: bolder;
+  text-align: center;
+  background-color: rgb(4, 4, 78);
+}
+
+.toolbar-icon {
+  padding: 0 0px;
+}
+
+.sidenavContainer {
+  height: 90%;
+  border-color: rgb(4, 4, 78);
+}
+
+.toolbar-spacer {
+  flex: 1 1 auto;
+}
+
+.top-nav {
+  height: 64px;
+  position: fixed;
+  top: 0px;
+}
+
+.fixed-toolbar {
+  position: sticky;
+  z-index: 5;
+  top: 0;
+  width: 100%;
+}
+
+.inner-content{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+// mat-sidenav:not(.mat-drawer-opened) {
+//   transform: translate3d(0, 0, 0) !important;
+//   visibility: visible !important;
+//   width: 55px !important;
+//   overflow: hidden;
+// }
+
+// .mat-drawer-content:not(.mat-drawer-opened) {
+//   position: relative;
+//   z-index: 1;
+//   display: block;
+//   height: 100%;
+//   margin-left: 70px;
+//   overflow: auto;
+// }
+
+.mat-drawer-content {
+  overflow-x: hidden;
+}
+.sideNavBanner {
+  height: 36px;
+  background-color: #29abe3;
+  padding: 5px 2px 1px 2px;
+  margin-top: -8px;
+}
+
+.lasAllInImg {
+  position: relative;
+  margin-right: 15px;
+  top: 0;
+  left: -10px;
+  height: 25px;
+  width: auto;
+}
+
+.lasAllInText {
+  position: relative;
+  top: 2px;
+  left: -17px;
+  height: 25px;
+  width: auto;
+}
+.is-active {
+  background-color: #CFCFCF;
+  color: black;
+}
+.icon-active {
+  color: red;
+}
+.mr-5 {
+  display: block;
+  margin-right: 55px;
+}

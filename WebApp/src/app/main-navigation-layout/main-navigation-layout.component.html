@@ -1,0 +1,55 @@
+<div class="sidenav-content fixed-toolbar">
+
+    <mat-toolbar color="primary">
+    <mat-toolbar-row >
+
+      <button mat-icon-button  (click)="drawer.toggle(); onToggleMenu();"><mat-icon>menu</mat-icon></button>
+
+      <span >Google Charts Demo</span>
+      <span class="toolbar-spacer"></span>
+
+      <span class="mr-5"></span>
+      <span class="mr-5"></span>
+      <span class="mr-5"></span>
+      <span class="mr-5"></span>
+
+      <button mat-fab color="info" [routerLink]="['/']">
+        <mat-icon>pie_chart</mat-icon>
+      </button>
+
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </div>
+
+
+  <mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #drawer class="sidenav" id="sidenav"
+        fixedInViewport="true"
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'"
+        [opened]="!(isHandset$ | async)">
+
+      <mat-toolbar>
+        <header class="logo">
+        </header>
+      </mat-toolbar>
+      <mat-nav-list >
+
+        <a [routerLink]="['/pie']" mat-list-item href="javascript:void(0)" [routerLinkActive]="['is-active']"><mat-icon [routerLinkActive]="['icon-active']" color="info">pie_chart</mat-icon>&nbsp; Pie Chart (CDC)</a>
+        <a [routerLink]="['/bar']" mat-list-item href="javascript:void(0)" [routerLinkActive]="['is-active']"><mat-icon [routerLinkActive]="['icon-active']" color="info">leaderboard</mat-icon>&nbsp; Bar Chart</a>
+        <a [routerLink]="['/map']" mat-list-item href="javascript:void(0)" [routerLinkActive]="['is-active']"><mat-icon [routerLinkActive]="['icon-active']" color="info">view_quilt</mat-icon>&nbsp; World Map</a>
+        <a [routerLink]="['/stock']" mat-list-item href="javascript:void(0)" [routerLinkActive]="['is-active']"><mat-icon [routerLinkActive]="['icon-active']" color="info">view_quilt</mat-icon>&nbsp; Stock Chart</a>
+        <a [routerLink]="['/us-map']" mat-list-item href="javascript:void(0)" [routerLinkActive]="['is-active']"><mat-icon [routerLinkActive]="['icon-active']" color="info">view_column</mat-icon>&nbsp; US Map</a>
+        <a [routerLink]="['/gauges']" mat-list-item href="javascript:void(0)" [routerLinkActive]="['is-active']"><mat-icon [routerLinkActive]="['icon-active']" color="info">network_check</mat-icon>&nbsp; Gauges</a>
+        <a [routerLink]="['/org-chart']" mat-list-item href="javascript:void(0)" [routerLinkActive]="['is-active']"><mat-icon [routerLinkActive]="['icon-active']" color="info">assessment</mat-icon>&nbsp; Org Chart</a>
+        <a [routerLink]="['/sankey']" mat-list-item href="javascript:void(0)" [routerLinkActive]="['is-active']"><mat-icon [routerLinkActive]="['icon-active']" color="info">waves</mat-icon>&nbsp; Sankey Chart</a>
+
+      </mat-nav-list>
+
+    </mat-sidenav>
+
+    <mat-sidenav-content [ngStyle]="{ 'margin-left.px': contentMargin }" >
+      <router-outlet #o="outlet"></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+

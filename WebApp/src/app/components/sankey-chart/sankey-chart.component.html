@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="chartWithOverlay">
+
+      <google-chart [type]="type"
+          [data]="chartData"
+          [options]="sankeyOptions"
+          [title]="title"
+          [width]="width"
+          [height]="height"
+          (select)="getSelection($event)"
+      >
+      </google-chart>
+
+      <div class="overlay">
+        <div style="font-family:'Arial Black'; font-size: 128px;">88</div>
+        <div style="color: #b44; font-family:'Arial Black'; font-size: 32px; letter-spacing: .21em; margin-top:50px; margin-left:5px;">zombie</div>
+        <div style="color: #444; font-family:'Arial Black'; font-size: 32px; letter-spacing: .15em; margin-top:15px; margin-left:5px;">attacks</div>
+      </div>
+
+  </div>
+</div>

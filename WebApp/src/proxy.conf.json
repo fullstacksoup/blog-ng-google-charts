@@ -1,0 +1,7 @@
+{
+  "/api/*": {
+    "target": "https://api.spotify.com/v1",
+    "secure": false,
+    "logLevel": "debug"
+}
+}

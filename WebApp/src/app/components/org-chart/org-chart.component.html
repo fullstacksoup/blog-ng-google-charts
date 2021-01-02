@@ -1,0 +1,12 @@
+<div class="container">
+
+<google-chart [type]="type"
+              [data]="chartData"
+              [options]="options"
+              [title]="title"
+              [width]="width"
+              [height]="height"
+              (select)="getSelection($event)"
+              >
+</google-chart>
+</div>
